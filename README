@@ -8,11 +8,10 @@ O projeto consiste em implementar um personagem de RPG utilizando a linguagem Da
 Exibição de informações do personagem: Nome, raça, classe, idade, altura, se ele é mágico, pontos de vida e energia.
 Batalha automática: O personagem utiliza aleatoriamente uma de suas habilidades durante a batalha.
 Esgotamento de energia: A energia do personagem vai diminuindo a cada rodada até chegar a zero, encerrando a batalha.
+
 ⚙️ Como executar
     1. Certifique-se de que o Dart está instalado na sua máquina. Se não estiver, você pode baixá-lo em: Dart SDK.
-
     2. Clone este repositório ou copie o código.
-
     3. Navegue até o diretório do projeto e execute o comando: "dart run"
 
 🌟 Pontos principais
