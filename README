@@ -1,7 +1,7 @@
-🦸 Personagem RPG em Dart
+## 🦸 Personagem RPG em Dart
 Este projeto faz parte das práticas do curso Dart: criando e manipulando variáveis e listas, oferecido pela Alura. O objetivo principal é aplicar os conceitos aprendidos, como criação de variáveis, manipulação de listas e controle de fluxo.
 
-🎯 Objetivo
+## 🎯 Objetivo
 O projeto consiste em implementar um personagem de RPG utilizando a linguagem Dart, exibindo suas características e simulando uma batalha onde o personagem utiliza habilidades até que sua energia se esgote.
 
 🚀 Funcionalidades
