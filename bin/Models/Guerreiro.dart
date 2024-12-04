@@ -11,7 +11,6 @@ class Guerreiro extends Personagem implements Combate{
     required String raca,
     required int idade,
     required double altura,
-    required int vida,
     required int energia,
     required List<String> habilidades,
     required this.arma,
@@ -23,7 +22,6 @@ class Guerreiro extends Personagem implements Combate{
     idade: idade,
     altura: altura,
     magico: false,
-    vida: vida,
     energia: energia,
     habilidades: habilidades,
   );

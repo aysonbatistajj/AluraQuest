@@ -8,7 +8,7 @@ class Personagem {
   int idade;
   double altura;
   bool magico;
-  int _vida;
+  int _vida = 100;
   StatusDeVida _statusDeVida = StatusDeVida.vivo;
   int energia;
   List<String> habilidades;
@@ -21,20 +21,24 @@ class Personagem {
     required this.idade,
     required this.altura,
     required this.magico,
-    required int vida,
     required this.energia,
     required this.habilidades,
-  }) : _vida = vida;
+  });
 
 
   int get vida => _vida;
-  set vida(int value) {
-    _vida = value;
-    atualizaStatusDeVida();
+
+   set vida(int valor){
+     try {
+      if (valor < 0) {
+        throw ArgumentError("O valor de pontos de vida precisa ser positivo");
+      }
+      _vida = valor;
+      atualizaStatusDeVida();
+    } on ArgumentError catch (e) {
+      print(e.message);
+    }
   }
-
-  StatusDeVida get statusDeVida => _statusDeVida;
-
 
   void exibirFicha() {
     print('Ficha do Personagem:');

@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import '../Exceptions/PersonagemDerrotadoException.dart';
 import 'Personagem.dart';
 import '../Interface/Combate.dart';
 import '../Enum/Feticos.dart';
@@ -13,7 +13,6 @@ class Mago extends Personagem implements Combate{
     required String raca,
     required int idade,
     required double altura,
-    required int vida,
     required int energia,
     required List<String> habilidades,
   }) : feiticos = {}, super(
@@ -23,7 +22,7 @@ class Mago extends Personagem implements Combate{
     idade: idade,
     altura: altura,
     magico: true, // Magos possuem habilidades mágicas
-    vida: vida,
+  
     energia: energia,
     habilidades: habilidades,
   );
@@ -55,15 +54,16 @@ class Mago extends Personagem implements Combate{
     print("Lançando feitiço: ${feiticoAleatorio.name} com poder de $poder!");
   }
 
-
   @override
   void exibirFicha() {
     super.exibirFicha(); // Reutiliza o método da classe base
   }
 
-
   @override
   void atacar(Personagem alvo) {
+    if(vida < 1){
+      throw PersonagemDerrotadoException();
+    }
     print('$nome lança um feitiço em ${alvo.nome}!');
     alvo.vida -= 15;
     print('${alvo.nome} agora tem ${alvo.vida} de vida.');
